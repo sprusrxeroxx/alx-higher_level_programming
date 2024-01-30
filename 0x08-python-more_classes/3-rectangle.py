@@ -49,12 +49,17 @@ class Rectangle:
         """Calculates the perimeter of the rectangle"""
         return 2 * (self.width + self.height)
 
-    def print(self):
-        """Prints out the shape of the rectangle"""
-        if self.width == 0 or self.height == 0:
-            print("")
-            return
-        for i in range(0, self.height):
-            print("")
-            for j in range(0, self.width):
-                print("#", end="")
+    def __str__(self):
+        """Return the printable representation of the Rectangle.
+
+        Represents the rectangle with the # character.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return "".join(rect)
