@@ -51,6 +51,9 @@ class Rectangle:
 
     def print(self):
         """Prints out the shape of the rectangle"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
         for i in range(0, self.height):
             print("")
             for j in range(0, self.width):
