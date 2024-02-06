@@ -11,6 +11,6 @@ def read_file(filename=""):
     Returns:
         prints Contents of file to the screen
     '''
-    with open(filename, "r", encoding='utf8') as fd:
+    with open(filename, "r", encoding='UTF-8') as fd:
         for line in fd:
             print(line)
