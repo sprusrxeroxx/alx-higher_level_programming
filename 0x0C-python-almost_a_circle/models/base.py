@@ -1,12 +1,10 @@
-'''
-  This is A BASE class for the entire project
-'''
+# This is A BASE class for the entire project
+
 
 class Base:
-    '''
-        This is a base class which will define every class in the project
-    '''
-    Base.__nb_objects = 0
+        #This is a base class which will define every class in the project
+
+    __nb_objects = 0
     def __init__(self, id=None):
         
         if id != None :
