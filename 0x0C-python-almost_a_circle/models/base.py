@@ -3,11 +3,13 @@
 '''
 
 class Base:
-    __nb_objects = 0
+    '''
+        This is a base class which will define every class in the project
+    '''
     def __init__(self, id=None):
+        self.__nb_objects = 0
         
-        if id != None:
+        if self.id != None :
             self.id = id
         else:
-            __nb_objects += 1
-            self.id = __nb_objects
+            self.__nb_objects += 1
