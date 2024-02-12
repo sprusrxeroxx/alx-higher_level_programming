@@ -16,7 +16,6 @@ class Base:
 
 
 if __name__ == "__main__":
-
     b1 = Base()
     print(b1.id)
 
@@ -25,3 +24,9 @@ if __name__ == "__main__":
 
     b3 = Base()
     print(b3.id)
+
+    b4 = Base(12)
+    print(b4.id)
+
+    b5 = Base()
+    print(b5.id)
