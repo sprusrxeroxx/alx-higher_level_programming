@@ -1,14 +1,22 @@
 #!/usr/bin/python3
 
-# This is A BASE class for the entire project
-
+"""Defines a Bass class"""
 
 class Base:
-#This is a base class which will define every class in the project
+"""Models the properties of Bass class
 
+
+    Attributes:
+        id(int): identity of each instance.
+"""
     __nb_objects = 0
+
     def __init__(self, id=None):
-        
+         """Creates new instances of Base.
+
+            Args:
+                id (int, optional): Identity of each instance. Defaults to None.
+         """
         if id != None :
             self.id = id
         else:
