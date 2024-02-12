@@ -6,11 +6,24 @@ class Base:
     '''
         This is a base class which will define every class in the project
     '''
+    Base.__nb_objects = 0
     def __init__(self, id=None):
-        self.__nb_objects = 0
         
-        if self.id != None :
+        if id != None :
             self.id = id
         else:
-            self.__nb_objects += 1
-            self.id = self.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+
+
+
+if __name__ == "__main__":
+
+    b1 = Base()
+    print(b1.id)
+
+    b2 = Base()
+    print(b2.id)
+
+    b3 = Base()
+    print(b3.id)
