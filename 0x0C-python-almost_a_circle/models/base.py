@@ -4,7 +4,7 @@
 
 
 class Base:
-        #This is a base class which will define every class in the project
+#This is a base class which will define every class in the project
 
     __nb_objects = 0
     def __init__(self, id=None):
