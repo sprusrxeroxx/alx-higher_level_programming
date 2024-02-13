@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Defines unittests for base.py.
-
+"""Defines unittests for base.py."""
+"""
 Unittest classes:
     TestBase_instantiation - line 21
     TestBase_to_json_string - line 108
@@ -9,13 +9,13 @@ Unittest classes:
     TestBase_create - line 286
     TestBase_load_from_file - line 338
     TestBase_save_to_file_csv - line 404
-    TestBase_load_from_file_csv - line 482
+    TestBase_load_from_file_csv - line 48
 """
 import os
 import unittest
 from models.base import Base
-#from models.rectangle import Rectangle
-#from models.square import Square
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase_instantiation(unittest.TestCase):
@@ -105,7 +105,6 @@ class TestBase_instantiation(unittest.TestCase):
             Base(1, 2)
 
 
-'''
 class TestBase_to_json_string(unittest.TestCase):
     """Unittests for testing to_json_string method of Base class."""
 
@@ -548,4 +547,3 @@ class TestBase_load_from_file_csv(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-'''
