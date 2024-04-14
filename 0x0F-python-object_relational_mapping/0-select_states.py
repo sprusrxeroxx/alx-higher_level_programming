@@ -20,7 +20,7 @@ session = Session()
 class states(Base):
     __tablename__="states"
     id = Column("id", Integer, nullable=False, autoincrement=True, primary_key=True)
-    name = Column("firstName", String(254))
+    name = Column("name", String(254))
 
     def __init__(self, id, name):
         self.id = id
