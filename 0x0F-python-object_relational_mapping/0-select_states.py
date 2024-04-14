@@ -19,4 +19,3 @@ if __name__ == '__main__':
   finally:
     if db:
       db.close()
-      cur.close()
