@@ -11,10 +11,7 @@ import sys
 import MySQLdb
 
 if __name__ == '__main__':
-    if len(sys.argv) == 4:
-      db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-      c = db.cursor()
-      c.execute("SELECT * FROM `states`")
-      [print(state) for state in c.fetchall()]
-    else:
-        pass
+  db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+  c = db.cursor()
+  c.execute("SELECT * FROM `states`")
+  [print(state) for state in c.fetchall()]
