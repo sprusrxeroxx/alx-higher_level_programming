@@ -27,7 +27,7 @@ class states(Base):
         self.name= name
 
 if __name__ == '__main__':
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 4:
       allStates= session.query(states).all()
       S = [(s.id, s.name) for s in allStates]
       print(S)
