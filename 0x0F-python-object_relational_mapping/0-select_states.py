@@ -2,20 +2,18 @@
 
 """
 @author: NTK
+  Lists all states from the database hbtn_0e_0_usa.
+  Usage: ./0-select_states.py <mysql username> \
+        <mysql password> \
+        <database name>
 """
 import sys
+import MySQLdb
 
-from sqlalchemy import create_engine, String, Integer, Column
+from sqlalchemy import String, Integer, Column
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
-db = f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}" #connection string to describe mysql database
-engine = create_engine(db) # creates an engine object to establish connection with Mysql database
-Base.metadata.create_all(engine) # creates a table in Mysql database (if it doesn't already exist)
-Session = sessionmaker(bind=engine) # creates session object which interacts with the database
-session = Session()
-
 
 class states(Base):
     __tablename__="states"
@@ -28,8 +26,9 @@ class states(Base):
 
 if __name__ == '__main__':
     if len(sys.argv) == 4:
-      allStates= session.query(states).all()
-      S = [(s.id, s.name) for s in allStates]
-      [print(i) for i in S]
+      db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+      c = db.cursor()
+      c.execute("SELECT * FROM `states`")
+      [print(state) for state in c.fetchall()]
     else:
         pass
