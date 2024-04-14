@@ -4,25 +4,11 @@
 @author: NTK
   Lists all states from the database hbtn_0e_0_usa.
   Usage: ./0-select_states.py <mysql username> \
-        <mysql password> \
-        <database name>
+                              <mysql password> \
+                              <database name>
 """
 import sys
 import MySQLdb
-
-from sqlalchemy import String, Integer, Column
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
-
-class states(Base):
-    __tablename__="states"
-    id = Column("id", Integer, nullable=False, autoincrement=True, primary_key=True)
-    name = Column("name", String(254))
-
-    def __init__(self, id, name):
-        self.id = id
-        self.name= name
 
 if __name__ == '__main__':
     if len(sys.argv) == 4:
