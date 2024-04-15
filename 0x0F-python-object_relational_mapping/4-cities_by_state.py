@@ -9,7 +9,7 @@ from sys import argv
 
 if __name__ == '__main__':
 
-    if len(argv) != 5:
+    if len(argv) != 4:
         print("Usage: script_name.py <username>\
                <password> <database> <state_name>")
         exit(1)
