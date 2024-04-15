@@ -26,7 +26,7 @@ if __name__ == '__main__':
         cur.execute(sql, (state_name,))
 
         rows = cur.fetchall()
-        [print(i, sep=", ") for i in rows]
+        [print(i, sep=",", end=" ") for i in rows]
 
     except MySQLdb.Error as err:
         print("Error connecting to database:", err)
