@@ -14,7 +14,7 @@ if __name__ == '__main__':
                  cities.state_id=states.id;")
     rows = cur.fetchall()
     [print(i) for i in rows]
-    
+
   except MySQLdb.Error as err:
     print("Error connecting to database:", err)
 
