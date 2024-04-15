@@ -13,6 +13,7 @@ if __name__ == '__main__':
         print("Usage: script_name.py <username>\
                <password> <database> <state_name>")
         exit(1)
+        
 
     try:
         # a secure connection parameterization method
