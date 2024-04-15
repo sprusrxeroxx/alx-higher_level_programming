@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
         # parameterized query with placeholder for state name
         state_name = argv[4]
-        sql = "select name from cities where \
+        sql = "select name from cities where\
                 state_id = (select id from states where name = %s)"
         cur.execute(sql, (state_name,))
 
