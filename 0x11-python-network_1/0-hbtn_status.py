@@ -10,12 +10,9 @@ def fetch_status():
     with urllib.request.urlopen(url) as response:
         body = response.read()
     print("Body response:")
-    # Print type of body
-    print(f"\t- type: {type(body)}")
-    # Print encoded content (bytes)
-    print(f"\t- content: {body}")
-    # Decode and print content as UTF-8 string
-    print(f"\t- utf8 content: {body.decode('utf-8')}")
+    print(f"  - type: {type(body)}")
+    print(f"  - content: {body}")
+    print(f"  - utf8 content: {body.decode('utf-8')}")
 
 if __name__ == "__main__":
   fetch_status()
