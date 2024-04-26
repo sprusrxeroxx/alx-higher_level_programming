@@ -3,9 +3,8 @@ import urllib.request
 
 """This is a script which fetches a status for a particular url"""
 
+
 def fetch_status():
-
-
     url = 'https://alx-intranet.hbtn.io/status'
     with urllib.request.urlopen(url) as response:
         body = response.read()
