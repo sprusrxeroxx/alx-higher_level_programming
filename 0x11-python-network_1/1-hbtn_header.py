@@ -13,7 +13,7 @@ def get_request_id(url):
       headers = response.headers
       request_id = headers.get("X-Request-Id")
       if request_id:
-        print(f"X-Request-Id: {request_id}")
+        print(request_id)
       else:
         print("X-Request-Id header not found.")
   except urllib.error.URLError as e:
