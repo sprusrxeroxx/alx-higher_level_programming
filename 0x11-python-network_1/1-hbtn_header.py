@@ -2,8 +2,11 @@
 import urllib.request
 import sys
 
+"""This a script Fetches the X-Request-Id header
+    from the given URL.
+"""
+
 def get_request_id(url):
-  """Fetches the X-Request-Id header from the given URL."""
 
   try:
     with urllib.request.urlopen(url) as response:
@@ -15,6 +18,7 @@ def get_request_id(url):
         print("X-Request-Id header not found.")
   except urllib.error.URLError as e:
     print(f"Error: {e}")
+
 
 if __name__ == "__main__":
   get_request_id(sys.argv[1])
