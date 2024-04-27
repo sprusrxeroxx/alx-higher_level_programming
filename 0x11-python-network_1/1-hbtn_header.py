@@ -8,6 +8,7 @@ import sys
 
 def get_request_id(url):
 
+
     try:
         with urllib.request.urlopen(url) as response:
             headers = response.headers
