@@ -10,10 +10,11 @@ import sys
 
 def send_post_request(url, email):
     data = urllib.parse.urlencode({"email": email}).encode("utf-8")
+    request = urllib.request.Request(url, data)
     try:
-        with urllib.request.urlopen(url, data=data, method="POST") as response:
+        with urllib.request.urlopen(request) as response:
             body = response.read().decode("utf-8")
-        print(f"Response body:\n{body}")
+        print(body)
     except urllib.error.URLError as e:
         print(f"Error: {e}")
 
