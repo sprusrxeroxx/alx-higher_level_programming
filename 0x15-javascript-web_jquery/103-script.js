@@ -1,3 +1,5 @@
+// A JavaScript script that fetches and prints how to say “Hello” depending on the language
+
 $('document').ready(function () {
     $('INPUT#btn_translate').click(translate);
     $('INPUT#language_code').focus(function () {
